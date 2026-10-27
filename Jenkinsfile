@@ -64,7 +64,7 @@ pipeline {
       steps {
         withCredentials([
           string(credentialsId: 'cloudflare-api-token',
-                 variable: 'CLOUDFLARE_API_TOKEN'),
+                 variable: 'TF_VAR_cloudflare-api-token'),
           string(credentialsId: 'cloudflare-account-id',
                  variable: 'TF_VAR_account_id')
         ]) {
